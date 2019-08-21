@@ -9,3 +9,14 @@ Vue.directive('my-directive', {
     // do the clean up work
   }
 });
+
+Vue.directive('square', function(el, binding) {
+  el.innerHTML = Math.pow(binding.value, 2);
+});
+
+new Vue ({
+  el: '#app',
+  data: {
+    item: 144
+  }
+});
